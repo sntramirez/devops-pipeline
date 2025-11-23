@@ -1,6 +1,49 @@
-# DevOps Pipeline - CI/CD Completo
+# DevOps Pipeline - CI/CD Completo con Infrastructure as Code
 
-Este proyecto implementa un pipeline completo de CI/CD (Integración Continua y Despliegue Continuo) utilizando GitHub Actions.
+Este proyecto implementa un pipeline completo de CI/CD (Integración Continua y Despliegue Continuo) utilizando GitHub Actions, junto con **Infrastructure as Code (IaC)** para configurar servidores Ubuntu desde cero.
+
+## 🎯 Características Principales
+
+- 🚀 **Infrastructure as Code**: Configura un servidor Ubuntu desde cero con un solo comando
+- ♻️ **Reproducibilidad Total**: Clona la máquina y vuelve a ejecutar los scripts para recrear el ambiente
+- 🔄 **CI/CD Automatizado**: Pipeline completo con GitHub Actions
+- 🐳 **Multi-deployment**: Soporta PM2, Systemd y Docker
+- 🔔 **Auto-Deploy**: Webhooks de GitHub para deployment automático
+- 📊 **Monitoreo**: Scripts de monitoreo y health checks
+
+---
+
+## 🚀 Inicio Rápido
+
+### En una Máquina Ubuntu Nueva (Desde Cero)
+
+```bash
+# 1. Clonar repositorio
+git clone https://github.com/sntramirez/devops-pipeline.git
+cd devops-pipeline
+
+# 2. Ejecutar bootstrap (instala TODO automáticamente)
+sudo bash infrastructure/bootstrap.sh
+
+# 3. Desplegar aplicación
+bash infrastructure/deploy.sh
+
+# ¡Listo! Aplicación corriendo en http://localhost:3000
+```
+
+### Usando Make (Recomendado)
+
+```bash
+make help           # Ver todos los comandos
+make bootstrap      # Configurar servidor desde cero
+make deploy         # Desplegar aplicación
+make start-pm2      # Iniciar con PM2
+make logs           # Ver logs
+```
+
+📖 **Documentación completa de Infrastructure as Code**: Ver [INFRASTRUCTURE.md](INFRASTRUCTURE.md)
+
+---
 
 ## 🚀 Características
 
