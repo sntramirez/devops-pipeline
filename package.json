@@ -1,0 +1,22 @@
+{
+  "name": "devops-pipeline",
+  "version": "1.0.0",
+  "description": "Proyecto de ejemplo con CI/CD pipeline",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "jest",
+    "build": "echo 'Build completado exitosamente'",
+    "lint": "eslint src/**/*.js"
+  },
+  "keywords": ["ci", "cd", "devops", "pipeline"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "eslint": "^8.57.0"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
